@@ -7,10 +7,12 @@ class Anagram
   end 
   
   def match(phrase) 
+    results = []
     phrase.each do |w| 
       if @word.chars.sort.join == w.chars.sort.join
-        return w 
+        results << w
       end 
     end 
+    results
   end 
 end 
